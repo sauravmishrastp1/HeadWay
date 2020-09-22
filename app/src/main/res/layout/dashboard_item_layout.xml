@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/dashboard_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="6dp"
+    android:orientation="vertical"
+    android:background="@color/red"
+    android:elevation="4dp"
+    android:padding="5dp">
+
+
+    <RelativeLayout
+        android:id="@+id/dashboardrel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider">
+
+        <TextView
+            android:id="@+id/totalnumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat"
+            android:text="N/A"
+            android:visibility="gone"
+            android:padding="5dp"
+            android:layout_marginLeft="16dp"
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+
+        <ImageView
+            android:id="@+id/dash_img"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="16dp"
+            android:padding="5dp"
+            android:alpha="0.5"
+            android:layout_gravity="center"
+            android:scaleType="fitXY"
+            android:layout_alignParentRight="true"
+            app:srcCompat="@drawable/directsale"
+            tools:ignore="VectorDrawableCompat" />
+
+
+        <TextView
+            android:id="@+id/dashboard_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp"
+            android:fontFamily="@font/montserrat"
+            android:text="N/A"
+            android:padding="5dp"
+            android:layout_below="@+id/totalnumber"
+            android:textAlignment="center"
+            android:layout_marginLeft="16dp"
+            android:textColor="@color/white"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:orientation="vertical">
+
+        <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="?android:attr/listDivider"
+        android:backgroundTint="@color/white"
+         />
+
+
+        <TextView
+            android:id="@+id/moreinfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="More Info"
+            android:layout_below="@id/divider"
+            android:textAlignment="center"
+            android:textSize="12sp"
+            android:layout_marginRight="8dp"
+            android:layout_centerHorizontal="true"
+            android:textColor="@android:color/white"
+            android:fontFamily="@font/montserrat"
+            />
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_arrow_forward_black_24dp"
+            android:layout_toRightOf="@id/moreinfo"
+            android:layout_centerVertical="true"
+            android:layout_below="@id/divider"
+            android:layout_marginRight="8dp"
+
+            />
+
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>

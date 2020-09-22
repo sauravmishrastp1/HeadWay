@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/dashboard_layout"
+    android:layout_width="200dp"
+    android:layout_height="110dp"
+    android:layout_margin="5dp"
+    android:background="@drawable/background_xml"
+    android:orientation="vertical"
+    android:elevation="4dp"
+    android:padding="5dp">
+
+
+    <RelativeLayout
+        android:id="@+id/dashboardrel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:padding="8dp"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider">
+
+        <TextView
+            android:id="@+id/coursename"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat"
+            android:text="Digital Visiting Crad"
+            android:layout_toRightOf="@id/assetimg"
+            android:layout_marginRight="8dp"
+            android:padding="5dp"
+            android:layout_marginLeft="8dp"
+            android:textColor="@android:color/black"
+            android:textSize="15sp"/>
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_marginTop="10dp"
+            android:id="@+id/assetimg"
+            android:layout_height="40dp" />
+
+
+        <LinearLayout
+            android:id="@+id/pricelinear"
+            android:layout_toRightOf="@id/assetimg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="8dp"
+            android:layout_marginBottom="10dp"
+            android:layout_below="@+id/coursename">
+
+
+            <TextView
+                android:id="@+id/coursepricee"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="₹ 700/-"
+                android:fontFamily="@font/montserrat"
+                android:textAlignment="center"
+                android:layout_marginStart="10dp"
+                android:textColor="#868686"
+                android:textSize="16sp"/>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/editcourseview"
+            android:layout_below="@+id/linear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/editicon"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:visibility="gone" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="10sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:orientation="vertical">
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:visibility="gone"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="?android:attr/listDivider"
+            android:backgroundTint="@color/black"
+            />
+
+
+        <TextView
+            android:id="@+id/moreinfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="More Info"
+            android:visibility="gone"
+            android:layout_below="@id/divider"
+            android:textAlignment="center"
+            android:textSize="12sp"
+            android:layout_marginRight="8dp"
+            android:layout_centerHorizontal="true"
+            android:textColor="@android:color/black"
+            android:fontFamily="@font/montserrat"
+            />
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:visibility="gone"
+            android:src="@drawable/ic_arrow_forward_black_24dp"
+            android:layout_toRightOf="@id/moreinfo"
+            android:layout_centerVertical="true"
+            android:layout_below="@id/divider"
+            android:layout_marginRight="8dp"
+
+            tools:ignore="VectorDrawableCompat" />
+
+
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>

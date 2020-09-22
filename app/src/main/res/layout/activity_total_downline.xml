@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.TotalDownlineActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:navigationIcon="?attr/homeAsUpIndicator"
+        android:background="@color/colorPrimary">
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:id="@+id/linear"
+        android:layout_below="@id/toolbar"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="0.5dp"
+            android:text="AIN NUMBER"
+            android:layout_weight="1"
+            android:background="@color/colorPrimary"
+            android:padding="5dp"
+            android:gravity="center_horizontal"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:layout_toRightOf="@id/aintv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0.5dp"
+            android:text="NUMBER OF ORDERS"
+            android:layout_weight="1"
+            android:background="@color/colorPrimary"
+            android:padding="5dp"
+            android:gravity="center_horizontal"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            />
+
+
+    </LinearLayout>
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_below="@+id/linear"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+
+   <TextView
+       android:layout_width="wrap_content"
+       android:id="@+id/approve"
+       android:text="ACTIVE"
+       android:layout_marginLeft="10dp"
+       android:layout_marginTop="10dp"
+       android:textColor="@color/colorPrimary"
+       android:textSize="16sp"
+       android:textStyle="bold"
+       android:layout_below="@+id/linear"
+       android:layout_height="wrap_content"
+       tools:ignore="NotSibling" />
+    <View
+        android:layout_width="match_parent"
+        android:id="@+id/view"
+        android:layout_height="1dp"
+        android:background="?android:attr/listDivider"
+        android:layout_below="@id/approve"
+        android:layout_marginTop="8dp"></View>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/totaldownline_recycler"
+        android:layout_below="@+id/view"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </androidx.recyclerview.widget.RecyclerView>
+    <TextView
+        android:layout_width="wrap_content"
+        android:id="@+id/Pending"
+        android:text="INACTIVE"
+        android:layout_marginLeft="10dp"
+        android:textColor="@color/colorPrimary"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_below="@+id/totaldownline_recycler"
+        android:layout_height="wrap_content" />
+        <View
+            android:layout_width="match_parent"
+            android:id="@+id/view2"
+            android:layout_height="1dp"
+            android:background="?android:attr/listDivider"
+            android:layout_below="@id/Pending"
+            android:layout_marginTop="8dp"></View>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/Pending_recycler"
+        android:layout_below="@+id/view2"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:id="@+id/under_proccess"
+        android:text="REJECT"
+        android:layout_marginLeft="10dp"
+        android:visibility="gone"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/colorPrimary"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_below="@+id/Pending_recycler"
+        android:layout_height="wrap_content" />
+        <View
+            android:layout_width="match_parent"
+            android:id="@+id/view3"
+            android:layout_height="1dp"
+            android:background="?android:attr/listDivider"
+            android:layout_below="@id/under_proccess"
+            android:layout_marginTop="8dp"></View>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/under_proccess_recycler"
+        android:layout_below="@+id/view3"
+        android:visibility="gone"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </androidx.recyclerview.widget.RecyclerView>
+    </RelativeLayout>
+</ScrollView>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/oopslinear"
+        android:visibility="gone"
+        android:layout_margin="10dp"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+
+
+    <ImageView
+        android:id="@+id/oops"
+        android:layout_width="300dp"
+        android:layout_height="200dp"
+        android:src="@drawable/oops_png"
+        android:layout_gravity="center_horizontal"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Recently You Have No Downline !!!"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center_horizontal"
+            android:textSize="24sp"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="italic" />
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

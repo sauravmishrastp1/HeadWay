@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:cardCornerRadius="0dp"
+    app:cardElevation="4dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimary">
+
+        <RelativeLayout
+            android:id="@+id/actionLAy"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:background="?attr/selectableItemBackgroundBorderless">
+
+            <ImageView
+                android:id="@+id/sideMenu"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_centerInParent="true"
+                android:padding="6dp"
+
+                android:tint="#fff"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/headwaygmslogo" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="?attr/selectableItemBackground">
+
+           <!-- <ImageView
+                android:layout_width="196dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/tkl_logo"
+                android:layout_centerVertical="true" />-->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Home"
+                android:textSize="18dp"
+                android:gravity="center"
+                android:textColor="#fff" />
+
+            <ImageView
+                android:id="@+id/searchIcon_iV"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:src="@drawable/headwaygmslogo"
+                android:tint="#fff"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:padding="6dp"/>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

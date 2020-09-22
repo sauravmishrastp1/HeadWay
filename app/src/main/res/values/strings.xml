@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">DOCTOR PLUS</string>
+
+    <string name="genderlist">Mr.</string>
+
+    <string name="male">Ms.</string>
+
+    <string name="female">Mrs.</string>
+    <string name="ms">M/S.</string>
+    <string name="department">Department</string>
+    <string name="employee">Sales Employee</string>
+</resources>

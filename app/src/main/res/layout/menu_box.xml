@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:elevation="8dp"
+    android:background="@drawable/button_background"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_weight="2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:orientation="vertical"
+            android:layout_centerInParent="true"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="Menu"
+                android:textSize="20sp"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/montserrat"
+                android:textColor="@color/white"
+                android:layout_centerInParent="true"
+                android:layout_height="90dp"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_weight="3"
+        android:columnCount="2"
+        android:padding="10dp"
+        android:layout_marginTop="@dimen/margin_10dp"
+        android:rowCount="3"
+        android:background="@drawable/background_down"
+        android:layout_height="200dp">
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_height="0dp"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_margin="5dp"
+            app:cardCornerRadius="5dp"
+            >
+            <RelativeLayout
+                android:weightSum="3"
+                android:layout_width="match_parent"
+                android:id="@+id/bannercard"
+                android:background="#EEECEC"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                >
+
+                <ImageView
+                    android:layout_width="70dp"
+                    android:id="@+id/image"
+                    android:layout_centerHorizontal="true"
+                    android:layout_height="30dp"
+                    android:layout_margin="15dp"
+                    android:src="@drawable/ic_action_name"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Home"
+                    android:layout_below="@id/image"
+                    android:textColor="#000"
+                    android:layout_centerHorizontal="true"
+                    android:fontFamily="@font/montserrat"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_height="0dp"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_margin="5dp"
+            app:cardCornerRadius="5dp"
+            >
+            <RelativeLayout
+                android:weightSum="3"
+                android:layout_width="match_parent"
+                android:id="@+id/bannercard22"
+                android:background="#EEECEC"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                >
+
+                <ImageView
+                    android:layout_width="70dp"
+                    android:id="@+id/image2"
+                    android:layout_centerHorizontal="true"
+                    android:layout_height="30dp"
+                    android:layout_margin="15dp"
+                    android:src="@drawable/profileimageicon"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Profile"
+                    android:layout_below="@id/image2"
+                    android:textColor="#000"
+                    android:layout_centerHorizontal="true"
+                    android:fontFamily="@font/montserrat"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_height="0dp"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_margin="5dp"
+            app:cardCornerRadius="5dp">
+            <RelativeLayout
+                android:weightSum="3"
+                android:layout_width="match_parent"
+                android:id="@+id/bannercard3"
+                android:background="#EEECEC"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                >
+
+                <ImageView
+                    android:layout_width="70dp"
+                    android:id="@+id/image3"
+                    android:layout_centerHorizontal="true"
+                    android:layout_height="30dp"
+                    android:layout_margin="15dp"
+                    android:src="@drawable/ic_tablet_mac_black_24dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="About Us"
+                    android:layout_below="@id/image3"
+                    android:textColor="#000"
+                    android:layout_centerHorizontal="true"
+                    android:fontFamily="@font/montserrat"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+
+
+        </androidx.cardview.widget.CardView>
+
+
+    </GridLayout>
+
+</LinearLayout>
